@@ -19,7 +19,7 @@ class ConferenceController extends AbstractController
         //]);
         $greet = '';
         if ($name = $request->query->get('hello')) {
-            $greet = sprintf('<h1>Hello $s!</h1>', htmlspecialchars($name));
+            $greet = sprintf('<h1>Hello %s !</h1>', htmlspecialchars($name));
         }
         return new Response(<<<EOF
 <html>
