@@ -5,6 +5,7 @@ type: php:7.4
 runtime:
     extensions:
         - pdo_pgsql
+        - pgsqls
         - apcu
         - mbstring
         - sodium
