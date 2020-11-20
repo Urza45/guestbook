@@ -1,3 +1,5 @@
+<?php
+
 namespace App\EntityListener;
 
 use App\Entity\Conference;
@@ -14,12 +16,12 @@ class ConferenceEntityListener
     }
 
     public function prePersist(Conference $conference, LifecycleEventArgs $event)
-     {
-         $conference->computeSlug($this->slugger);
-     }
+    {
+        $conference->computeSlug($this->slugger);
+    }
 
-     public function preUpdate(Conference $conference, LifecycleEventArgs $event)
-     {
-         $conference->computeSlug($this->slugger);
-     }
+    public function preUpdate(Conference $conference, LifecycleEventArgs $event)
+    {
+        $conference->computeSlug($this->slugger);
+    }
 }
